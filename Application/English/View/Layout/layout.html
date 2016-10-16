@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Coffee Break Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<script src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/vue.min.js"></script>
+<script src="/Public/js/layer.js"></script>
+<script src="/Public/js/dialog.js"></script>
+
+<link rel="stylesheet" href="style/reset.css" type="text/css">
+<link rel="stylesheet" href="style/main.css" type="text/css">
+<script src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+    var layoutInit=new Vue({
+        data:{
+            cate:{$cate},
+            cid:{$cid},
+        }
+    });
+</script>
+</head>
+<body>
+<div class="warp">
+
+    <div class="header">
+            <div class="logo left"><img src="image/logo.png"></div>
+            <div class="top right">
+                <div class="lang">
+                    <span>简体中文</span><span>|</span><span>English</span>
+                </div>
+
+                <div class="email right"><img src="image/email.png"><span>272833200@qq.com</span></div>
+                <div class="tel right"><img src="image/tel.png"><span>+4008888888</span></div>
+            </div>
+
+
+    </div>
+    <div class="menu">
+        <ul class="clear" id="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="product.html">关于Dorcoo</a></li>
+            <li><a href="engineering.html">产品中心</a></li>
+            <li><a href="aboutus.html">品牌专利</a></li>
+            <li><a href="">工程案例</a></li>
+            <li><a href="">联系我们</a></li>
+            <script type="text/javascript">
+                        var nav=new Vue({
+                            el:"#nav",
+                            data:{
+                                cate:"",
+                                cid:layoutInit.cid,
+                            },
+                            computed:{
+                                cate:function(){
+                                    var arr=layoutInit.cate;
+                                    var obj=new Object();
+                                    var obj={id:0,name:"主页",url:"/index.php?m=Chinese&c=Index"};
+                                    if(this.cid==0){
+                                        obj.class="active";
+                                    }
+                                    else{
+                                        obj.class="";
+                                    }
+                                    for (var i = arr.length - 1; i >= 0; i--) {
+                                        arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                        if(arr[i].id==this.cid){
+                                            arr[i].class="active";
+                                        }
+                                        else{
+                                            arr[i].class="";
+                                        }
+                                    }
+                                    arr.unshift(obj);
+                                    return arr;
+                                },
+                            }
+                        })
+            </script>
+        </ul>
+    </div>
+
+    <!--header-top-starts-->
+    <div class="header-top">
+        <div class="container">
+            <div class="head-main">
+                <a href="index.html"><img src="/Public/images/logo-1.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+    <!--header-top-end-->
+    <!--start-header-->
+    <div class="header">
+        <div class="container">
+            <div class="head">
+            <div class="navigation">
+                 <span class="menu"></span> 
+                    <ul class="navig" id="nav">
+                        <li v-for="i in cate"><a href="{{i.url}}" class="{{i.class}}">{{i.name}}</a></li>
+                    </ul>
+                    <script type="text/javascript">
+                        var nav=new Vue({
+                            el:"#nav",
+                            data:{
+                                cate:"",
+                                cid:layoutInit.cid,
+                            },
+                            computed:{
+                                cate:function(){
+                                    var arr=layoutInit.cate;
+                                    var obj=new Object();
+                                    var obj={id:0,name:"主页",url:"/index.php?m=Chinese&c=Index"};
+                                    if(this.cid==0){
+                                        obj.class="active";
+                                    }
+                                    else{
+                                        obj.class="";
+                                    }
+                                    for (var i = arr.length - 1; i >= 0; i--) {
+                                        arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                        if(arr[i].id==this.cid){
+                                            arr[i].class="active";
+                                        }
+                                        else{
+                                            arr[i].class="";
+                                        }
+                                    }
+                                    arr.unshift(obj);
+                                    return arr;
+                                },
+                            }
+                        })
+                    </script>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}">
+                    <input type="submit" value="">
+                </div>
+            </div>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+        </div>  
+    <!-- script-for-menu -->
+    <!-- script-for-menu -->
+        <script>
+            $("span.menu").click(function(){
+                $(" ul.navig").slideToggle("slow" , function(){
+                });
+            });
+        </script>
+    <!-- script-for-menu -->
+    <!--banner-starts-->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-top">
+                <!-- <div class="banner-text">
+                    <h2>Aliquam erat</h2>
+                    <h1>Suspendisse potenti</h1>
+                    <div class="banner-btn">
+                        <a href="single.html">Read More</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!--banner-end-->
+ 
+    {__CONTENT__}
+
+
+    <!--footer-starts-->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-text">
+               
+            </div>
+        </div>
+    </div>
+    <!--footer-end-->
+</body>
+</html>

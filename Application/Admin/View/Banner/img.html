@@ -1,0 +1,76 @@
+    <div id="news_list">
+        <table  class="table table-striped">
+            <tr>
+                <td>编号</td>
+                <td>图片</td>
+                <td>排序</td>
+                <td>操作</td>
+            </tr>
+            <tr v-for="i in list" data-id="{{i.id}}" data-cid="{{i.cate}}">
+                <td>{{i.id}}</td>
+                <td><img style="width:50px;height:50px;" src="{{i.url}}" alt=""></td>
+                <td>{{i.sort}}</td>
+                <td data-id={{i.id}}>
+                    <!-- <a @click="img">图片管理</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <a @click="update">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a v-on:click="del" >删除</a>
+                </td>
+            </tr>
+        </table>
+        <div class="btn-group">
+            <a class="btn btn-default" @click="addImg">添加图片</a>
+            <a class="btn btn-default" @click="black">返回上层</a>
+        </div>
+    </div>
+
+
+
+<script>
+    var list=new Vue({
+        el:"#news_list",
+        data:{
+            bid:{$bid},
+            list:{$imgList},
+        },
+        methods:{
+            del:function(event){
+                var id=event.currentTarget.parentNode.dataset.id;
+                $.get("/index.php?m=Admin&c=Banner&a=delImg",{id:id},function(res) {
+                    if(res.status==1){
+                        $.get("/index.php?m=Admin&c=Banner&a=ajaxGetImgList",{bid:list.bid},function(res) {
+                            list.list=res.data;
+                        },"json");
+                        dialog.successFun(res.message,function() {
+                            // nav.bannerList();
+                            return;
+                        });
+                    }
+                    else{
+                        dialog.error(res.message);
+                    }
+                },"json");
+            },
+            update:function(event) {
+                var id=event.currentTarget.parentNode.dataset.id;
+                dialog.iframeBox("添加图片","/index.php?m=admin&c=banner&a=imgUpdate&id="+id,"80%","80%");
+            },
+            img:function() {
+                var bid=event.currentTarget.parentNode.dataset.bid;
+                $.get("/index.php?m=Admin&c=Banner&a=addImg",{bid:bid},function(res) {
+                  $("#content").html(res);
+                });
+            },
+            addImg:function() {
+                dialog.iframeBox("添加图片","/index.php?m=admin&c=banner&a=imgAdd&bid="+list.bid,"80%","80%");
+            },
+            black:function() {
+                nav.bannerList();
+            },
+            updateImgList:function() {
+                $.get("/index.php?m=Admin&c=Banner&a=ajaxGetImgList",{bid:list.bid},function(res) {
+                    list.list=res.data;
+                },"json");
+            }
+        }
+    });
+</script>

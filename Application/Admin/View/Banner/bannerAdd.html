@@ -1,0 +1,80 @@
+
+
+<form class="form-horizontal" id="form" name="form" enctype="multipart/form-data">
+    <ul id="myTab" class="nav nav-tabs">
+       <!--  <li class="active">
+            <a href="#home" data-toggle="tab">基本设置</a>
+        </li>
+        <li><a href="#senior" data-toggle="tab">高级设置</a></li> -->
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <div class="form-group" style="margin-top: 15px;">
+                <label class="col-md-2 control-label">*名称:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.name">
+                </div>
+            </div>
+           
+        
+            <div class="form-group">
+                <label class="col-md-2 control-label">*标识:</label>
+                <div class="col-md-4">
+                    <input id="mark" type="text" class="form-control" v-model="form.mark">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-2">
+                    <button v-on:click="post" type="button" class="btn btn-default">确定</button>
+                </div>
+                <div class="col-md-offset-0 col-md-2">
+                    <button type="button" class="btn btn-default" @click="black">返回</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="senior">
+
+        </div>
+    </div>
+</form>
+<script>
+    var form=new Vue({
+        el:"#form",
+        data:{
+            form:{
+                name:"",
+                mark:"",
+            }
+        },
+        methods:{
+            post:function(event){
+                if(form.form.name==""){
+                    alert("请输入名称");
+                    return;
+                }
+                if(form.form.mark==""){
+                    alert("请输入标识");
+                    return;
+                }
+                $.post("/index.php?m=Admin&c=Banner&a=doAddBanner",{form:form.form},function(res){
+                    if(res.status==1){
+                        dialog.confirm1(res.message+",是否继续添加","是",function() {
+                            $("#img").attr("src","/Public/images/no_pc.gif");
+                            form.form.name="";
+                            form.form.mark="";
+                        },"否",function() {
+                            nav.bannerList();
+                        });
+                    }
+                    else{
+                        dialog.error(res.message);
+                    }
+
+                },"json");
+            },
+            black:function() {
+                nav.bannerList();
+            }
+        }
+    });
+</script>

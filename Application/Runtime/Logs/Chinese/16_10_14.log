@@ -1,0 +1,1197 @@
+[ 2016-10-14T12:49:57+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=0 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T12:49:58+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:49:58+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:49:59+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY c.order1' at line 1
+ [ SQL语句 ] : SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang= ) ORDER BY c.order1 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY c.order1' at line 1
+ [ SQL语句 ] : SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang= ) ORDER BY c.order1 
+
+[ 2016-10-14T12:50:01+08:00 ] ::1 /index.php?m=chinese&c=index&a=setLang&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T12:50:01+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-14T12:50:02+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:50:02+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:50:02+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY c.order1' at line 1
+ [ SQL语句 ] : SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang= ) ORDER BY c.order1 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY c.order1' at line 1
+ [ SQL语句 ] : SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang= ) ORDER BY c.order1 
+
+[ 2016-10-14T12:50:44+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T12:50:45+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T12:50:45+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T12:50:45+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T12:51:25+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T12:51:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:51:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T12:51:27+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+
+[ 2016-10-14T12:52:25+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T12:52:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:52:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:52:27+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T12:53:00+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T12:53:01+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:53:01+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T12:53:01+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T13:57:29+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T13:57:30+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T13:57:30+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+
+[ 2016-10-14T13:57:30+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T13:57:38+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=cate&id=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 52 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 53 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 54 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T13:57:40+08:00 ] ::1 /index.php?m=Chinese&c=List&a=getHotList&mark=21&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cate` WHERE ( mark=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 11 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: joinMain D:\phpStudy\WWW\zdm\Application\Common\Model\ListModel.class.php 第 24 行.
+SQL: SELECT * FROM `main` INNER JOIN list_content c on main.id=c.mid  WHERE `cid`  IN (36,37,38,39,40)  AND `hot`  = 1 ORDER BY c.order desc LIMIT 0,9   [ RunTime:0.0200s ]
+
+[ 2016-10-14T13:57:40+08:00 ] ::1 /index.php?m=Chinese&c=alone&a=getAloneContent&cid=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `main` INNER JOIN  alone a on a.cid=main.cid  WHERE main.cid = '52' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-10-14T13:57:40+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T13:58:28+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=cate&id=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 52 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 53 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 54 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T13:58:29+08:00 ] ::1 /index.php?m=Chinese&c=alone&a=getAloneContent&cid=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `main` INNER JOIN  alone a on a.cid=main.cid  WHERE main.cid = '52' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-10-14T13:58:29+08:00 ] ::1 /index.php?m=Chinese&c=List&a=getHotList&mark=21&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM `cate` WHERE ( mark=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 11 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: joinMain D:\phpStudy\WWW\zdm\Application\Common\Model\ListModel.class.php 第 24 行.
+SQL: SELECT * FROM `main` INNER JOIN list_content c on main.id=c.mid  WHERE `cid`  IN (36,37,38,39,40)  AND `hot`  = 1 ORDER BY c.order desc LIMIT 0,9   [ RunTime:0.0020s ]
+
+[ 2016-10-14T13:58:29+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T13:59:23+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=cate&id=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 52 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 53 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 54 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T13:59:24+08:00 ] ::1 /index.php?m=Chinese&c=alone&a=getAloneContent&cid=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `main` INNER JOIN  alone a on a.cid=main.cid  WHERE main.cid = '52' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-10-14T13:59:24+08:00 ] ::1 /index.php?m=Chinese&c=List&a=getHotList&mark=21&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cate` WHERE ( mark=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 11 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: joinMain D:\phpStudy\WWW\zdm\Application\Common\Model\ListModel.class.php 第 24 行.
+SQL: SELECT * FROM `main` INNER JOIN list_content c on main.id=c.mid  WHERE `cid`  IN (36,37,38,39,40)  AND `hot`  = 1 ORDER BY c.order desc LIMIT 0,9   [ RunTime:0.0030s ]
+
+[ 2016-10-14T13:59:24+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+
+[ 2016-10-14T14:06:45+08:00 ] ::1 /index.php?m=Chinese&c=Index&a=cate&id=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 52 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 53 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 54 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T14:06:47+08:00 ] ::1 /index.php?m=Chinese&c=List&a=getHotList&mark=21&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SELECT * FROM `cate` WHERE ( mark=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 11 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cate` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: joinMain D:\phpStudy\WWW\zdm\Application\Common\Model\ListModel.class.php 第 24 行.
+SQL: SELECT * FROM `main` INNER JOIN list_content c on main.id=c.mid  WHERE `cid`  IN (36,37,38,39,40)  AND `hot`  = 1 ORDER BY c.order desc LIMIT 0,9   [ RunTime:0.0050s ]
+
+[ 2016-10-14T14:06:47+08:00 ] ::1 /index.php?m=Chinese&c=alone&a=getAloneContent&cid=50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `main` INNER JOIN  alone a on a.cid=main.cid  WHERE main.cid = '52' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-14T14:06:47+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+
+[ 2016-10-14T14:07:29+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T14:07:32+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T14:07:32+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T14:07:32+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+
+[ 2016-10-14T15:01:47+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T15:01:48+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:01:48+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:01:48+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+
+[ 2016-10-14T15:14:05+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T15:14:07+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:14:07+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:14:07+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T15:18:24+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T15:18:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:18:26+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:18:26+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T15:22:17+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T15:22:19+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:22:19+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:22:19+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T15:22:40+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-14T15:22:42+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:22:42+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:22:42+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+
+[ 2016-10-14T15:24:30+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T15:24:32+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:24:32+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+
+[ 2016-10-14T15:24:32+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0000s ]
+
+[ 2016-10-14T15:25:09+08:00 ] ::1 /index.php?m=Chinese&c=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\Chinese\Controller\IndexController.class.php 第 95 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 50 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 51 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 63 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 64 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 65 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 66 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-14T15:25:11+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 1 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:25:11+08:00 ] ::1 /index.php?m=chinese&c=index&a=getBanner&mark=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BannerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\phpStudy\WWW\zdm\Application\Common\Model\BannerModel.class.php 第 11 行.
+SQL: SELECT `id` FROM `banner` WHERE `mark` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `img` WHERE `bid` = 2 ORDER BY sort asc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2016-10-14T15:25:11+08:00 ] ::1 /index.php?m=Chinese&c=index&a=getAllCate&lang=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.bhide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+

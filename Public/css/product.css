@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "QingYuan Regular";
+    src: url("../fontfamily/QingYuan.ttc"),
+    url("../fontfamily/Regular.ttf");
+}
+.warp{
+    width :1920px;
+    overflow: hidden;
+    position: absolute;
+}
+.header{
+    width:1400px;
+    height: 115px;
+    margin: 0 auto;
+    font: 16px "Microsoft YaHei";
+}
+.logo{
+    margin-top: 20px;
+
+    padding-left: 40px;
+    width: 728px;
+    height: 60px;
+}
+.header .lang{
+    margin:30px 0 16px 0;
+    width: 200px;
+    padding-left: 180px;
+}
+.header .lang span{
+    display: inline-block;
+    padding-right: 10px;
+}
+.header .top .right{
+    margin-right: 20px;
+}
+.header .top .right img{
+    margin-right: 5px;
+}
+.menu{
+    width: 1920px;
+    height: 45px;
+    background-color: #0952a0;
+    font-size: 18px;
+    font-family:"Microsoft YaHei";
+    font-weight: 400;
+
+}
+.menu ul{
+    width: 1050px;
+    height: 45px;margin: auto;
+}
+.menu li{
+    float: left;
+    text-align: center;
+    /*width :112px;*/
+    height: 45px;
+    
+    cursor: pointer;
+}
+.menu li a{
+    line-height: 45px;
+    color: #ededed;
+    /*width :112px;*/
+    height: 45px;
+    padding:0 25px;
+    display: inline-block;
+}
+.menu .active a{
+    background-color: #007bff;
+    color: #fff;
+}
+.menu li a:hover{
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+
+
+.banner{
+    width: 1920px;
+    height: 600px;
+    overflow: hidden;
+}
+.banner img{
+    width: 1920px;
+    height: 600px;
+}
+.banner_bottom{
+    width: 1920px;
+    /*height: 780px;*/
+    margin-top: 45px;
+}
+.banner_bottom .product_list{
+    width: 1400px;
+    /*height: 715px;*/
+    margin: 0 auto;
+}
+.banner_bottom .p_list{
+    width: 300px;
+    height: 400px;
+    background: url("../images/p_title.jpg") no-repeat;
+    padding-top: 57px;
+    padding-left: 25px;
+}
+.banner_bottom .p_list .p_li{
+    height: 37px;
+    width: 289px;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    color: #676869;
+    margin-left: 20px;
+    line-height: 48px;
+    cursor: pointer;
+    margin-left: -10px;
+    line-height: 37px;
+    padding-left: 55px;
+    background: url("../images/btn-bg2.gif") no-repeat;
+}
+.banner_bottom .p_list .p_li a{
+    color: #676869;
+}
+.banner_bottom .p_list .tit{
+    color: #ffffff;
+    background: url("../images/btn-bg1.gif") no-repeat;
+}
+.banner_bottom .p_list .tit a{
+    color: #ffffff;
+}
+.banner_bottom .product_list .p_show{
+    width: 1050px;
+}
+.p_show .page_now{
+    font: 16px "Microsoft YaHei";
+}
+.p_show .page_now span{
+    cursor: pointer;
+    padding-right: 5px;
+}
+.p_show .page_now span:last-child{
+   /* text-decoration: underline;
+    color: #153da9;*/
+}
+
+.prod_warp{
+    position: relative;
+    width: 100%;
+    /*height: 510px;*/
+    border: 2px solid #c5c4c4;
+    border-radius: 2px;
+    margin: 25px 0 0 0;
+    overflow: hidden;
+}
+.p_show .prod{
+    width: 100%;
+    height: 155px;
+    margin: 10px 0 20px 15px;
+    border-bottom: dotted 2px #c5c4c4;
+}
+.p_show .prod:last-child{
+    border: none;
+}
+.p_show .prod img{
+    width: 130px;
+    height: 102px;
+    border: 1px solid #dedfdf;
+    padding: 6px 9px;
+    margin-right: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.p_show .prod .detail{
+    width: 500px;
+    height: 116px;
+}
+.p_show .prod .detail .p_name{
+    font:18px "Microsoft YaHei";
+    color: #1232a6;
+    line-height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.p_show .prod .detail .introduct{
+    font: 16px "Microsoft YaHei";
+    color: #818483;
+    width: 500px;
+    height: 50px;
+    line-height: 27px;
+    font-size: 12px;
+}
+.p_show .prod .detail .more{
+    /*margin-top: 20px;*/
+    width: 100px;
+    height: 25px;
+    background-color: #aaaaaa;
+    color: #ffffff;
+    text-align: center;
+    font: 16px "Microsoft YaHei";
+    line-height: 25px;
+    cursor: pointer;
+}
+.p_show .prod .detail .more:hover{
+    background-color: #183ea9;
+}
+.p_show .prod .detail .more span{
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.p_show .page{
+    font: 12px "Microsoft YaHei";
+    width: 250px;
+    height: 30px;
+    margin: 0 auto;
+}
+.p_show .page>*{
+    float: left;
+}
+.p_show .page ul{
+    margin-left: 10px;
+}
+.p_show .page ul li{
+    float: left;
+    margin-left: 5px;
+}
+/*选项卡*/
+.one{
+
+    display: block;
+}
+.two{
+    border: none;
+    /*display: none;*/
+}
+
+
+.choosecard .card_parent li{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    font-weight: 600;
+    cursor: pointer;
+    color: #000000;
+    text-align: center;
+    line-height: 30px;
+    width: 100px;
+    float: left;
+    height: 30px;
+    margin-right: 1px;
+    border: #d4d4d3 1px solid;
+    border-bottom: #d4d4d3 0 solid;
+}
+.current{
+    background:url("../images/choose_card.png") no-repeat;
+    overflow: hidden;
+}
+.choosecard .card{
+    /*width: 980px;*/
+    padding-left: 10px;
+    min-height: 20px;
+    border:#d4d4d3 1px solid ;
+}
+/*选项卡*/
+
+
+.footer{
+    width: 1920px;
+    height: 265px;
+    background-color: #ffffff;
+}
+.footer .footer_main{
+    background-color: #f2f2f2;
+    box-shadow: 0px 4px 5px #7f7f7f inset;
+}
+.footer .footer_main .foot_menu{
+    margin: 0 auto;
+    width: 1400px;
+    height: 215px;
+}
+.footer .footer_main .foot_menu ul{
+    list-style: circle;
+    float: left;
+    margin:20px 55px 0 ;
+}
+.footer li{
+    margin-bottom: 3px;
+}
+.footer .footer_main .foot_menu ul a{
+    color: #5b5b5b;
+    font-size: 14px;
+}
+.footer .tit{
+    color: #5b5b5b;
+    margin-left:-15px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer .comm{
+    list-style: none;
+}
+.footer .foot_er{
+
+    margin-left: 80px;
+    margin-top: 15px;
+}
+.footer .foot_er p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #5b5b5b;
+    margin-bottom: 15px;
+}
+.footer .footer_con{
+    width: 1920px;
+    height: 35px;
+    background-color: #c4c4c4;
+}
+.footer .foot_con{
+    width: 1400px;
+    height: 35px;
+    margin: 0 auto;
+}
+.foot_con_fl,.foot_con_fr{
+    color: #5b5b5b;
+    font:12px  "Microsoft YaHei";
+    line-height: 35px;
+}

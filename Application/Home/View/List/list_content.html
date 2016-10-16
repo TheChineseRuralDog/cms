@@ -1,0 +1,29 @@
+<script>
+	var contentInit=new Vue({
+		data:{
+			content:{$content}
+		}
+	});
+</script>
+
+<div class="container" id="content">
+	<div class="row">
+		<div class="col-md-4">
+			<p>{{content.author}}</p>
+			<img src="{{content.tbpic}}">
+		</div>
+	</div>
+</div>
+<script>
+	var content=new Vue({
+		el:"#content",
+		date:{
+			content:""
+		},
+		computed:{
+			content:function() {
+				return contentInit.content;
+			}
+		}
+	});
+</script>

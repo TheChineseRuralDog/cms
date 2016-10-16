@@ -1,0 +1,69 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/Public/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/Public/js/jquery-1.10.2.min.js"></script>
+    <script src="/Public/js/vue.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <script>
+        var init=new Vue({
+            data:{
+                topNav:<?php echo ($topNav); ?>,
+                nav:<?php echo ($nav); ?>,
+            }
+        });
+    </script>
+    <style>
+        .list >*{
+            list-style: none;
+            margin-right: 15px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<header id="header" class="container">
+    <div class="row">
+        顶级导航
+        <ul class="list">
+            <li v-for="i in topNav"><a href="{{i.url}}">{{i.name}}</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        导航
+        <ul>
+            <li v-for="i in nav">
+                <a href="{{i.url}}">{{i.name}}</a>
+                <ul>
+                    <li v-for="j in i.child"><a href="{{j.url}}">{{j.name}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var header=new Vue({
+            el:"#header",
+            data:{
+                topNav:"",
+            },
+            computed:{
+                topNav:function() {
+                    return init.topNav;
+                },
+                nav:function() {
+                    return init.nav;
+                }
+            }
+        });
+    </script>
+</header>
+    <div class="container">
+	<div class="row">
+		首页内容
+	</div>
+</div>
+
+</body>
+</html>

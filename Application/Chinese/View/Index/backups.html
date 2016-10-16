@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/Public/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/Public/css/product.css" type="text/css">
+    <script src="/Public/js/jquery-3.0.0.min.js"></script>
+    <script src="/Public/js/vue.min.js"></script>
+    <script src="/Public/js/layer.js"></script>
+    <script src="/Public/js/dialog.js"></script>
+    <script type="text/javascript">
+        var layoutInit=new Vue({
+            data:{
+                cate:{$cate},
+                cid:{$cid},
+                topCid:{$topCid},
+                cate2:{$cate2},
+                currentCate:"",
+                currentCate2:"",
+            },
+            computed:{
+                currentCate:function() {
+                    var arr=this.cate;
+                    for (var i = arr.length - 1; i >= 0; i--) {
+                        arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                        if(arr[i].id==this.topCid){
+                            return arr[i];
+                        }
+                    }
+                    return "";
+                },
+                currentCate2:function() {
+                    var arr=this.cate2;
+                    for (var i = arr.length - 1; i >= 0; i--) {
+                        arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                        if(arr[i].id==this.cid){
+                            return arr[i];
+                        }
+                    }
+                    return "";
+                }
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div class="warp">
+
+    <div class="header">
+        <div class="logo left"><img src="/Public/images/logo.png"></div>
+        <div class="top right">
+            <div class="lang">
+                <span>简体中文</span><span>|</span><span>English</span>
+            </div>
+
+            <div class="email right"><img src="/Public/images/email.png"><span>272833200@qq.com</span></div>
+            <div class="tel right"><img src="/Public/images/tel.png"><span>+4008888888</span></div>
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="clear" id="nav">
+            <li v-for="i in cate" class="{{i.class}}"><a href="{{i.url}}">{{i.name}}</a></li>
+            <script type="text/javascript">
+                var nav=new Vue({
+                    el:"#nav",
+                    data:{
+                        cate:"",
+                        cid:layoutInit.topCid,
+                        cPic:"",
+                    },
+                    computed:{
+                        cate:function(){
+                            var arr=layoutInit.cate;
+                            var obj=new Object();
+                            var obj={id:0,name:"首页",url:"/index.php?m=Chinese&c=Index"};
+                            if(this.cid==0){
+                                obj.class="active";
+                            }
+                            else{
+                                obj.class="";
+                            }
+                            for (var i = arr.length - 1; i >= 0; i--) {
+                                arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                if(arr[i].id==this.cid){
+                                    arr[i].class="active";
+                                }
+                                else{
+                                    arr[i].class="";
+                                }
+                            }
+                            arr.unshift(obj);
+                            return arr;
+                        },
+                        cPic:function() {
+                            var arr=layoutInit.cate;
+                            for (var i = arr.length - 1; i >= 0; i--) {
+                                arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                if(arr[i].id==layoutInit.topCid){
+                                    return arr[i].pic1;
+                                }
+                            }
+                        }
+                    }
+                })
+            </script>
+        </ul>
+    </div>
+
+
+
+    <div class="banner">
+        <div class="banner_main" id="banner">
+            <img src="{{pic}}" alt="产品中心" />
+            <script type="text/javascript">
+                var banner=new Vue({
+                    el:"#banner",
+                    data:{
+                        pic:"",
+                    },
+                    computed:{
+                        pic:function() {
+                            return nav.cPic;
+                        }
+                    }
+                })
+            </script>
+        </div>
+    </div>
+    <div class="banner_bottom">
+        <div class="product_list " style="width:1100px;overflow: hidden;margin-bottom: 30px;">
+            <ul class="p_list right" style="width:300px;background: url('{{pic1}}') no-repeat;" id="nav2">
+                <li class="p_li {{i.class}}" v-for="i in cate"><a href="{{i.url}}">{{i.name}}</a></li>
+                <script type="text/javascript">
+                var nav2=new Vue({
+                    el:"#nav2",
+                    data:{
+                        cate:"",
+                        cid:layoutInit.cid,
+                        pic1:"",
+                    },
+                    computed:{
+                        cate:function(){
+                            var arr=layoutInit.cate2;
+                            for (var i = arr.length - 1; i >= 0; i--) {
+                                arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                if(arr[i].id==this.cid){
+                                    arr[i].class="tit";
+                                }
+                                else{
+                                    arr[i].class="";
+                                }
+                            }
+                            return arr;
+                        },
+                        pic1:function() {
+                            return layoutInit.currentCate.pic2;
+                        }
+                        
+                    }
+                })
+            </script>
+            </ul>
+            <div class="p_show left" style="width:700px;" id="list">
+                <div class="page_now"><span><a href="/index.php?m=Chinese&c=Index">首页</a></span><span>><a href="/index.php?m=Chinese&c=Index&a=cate&id={{currentCate.id}}">{{currentCate.name}}</a></span><span v-if="currentCate2!=''">>{{currentCate2.name}}</span></div>
+                <div class="prod_warp">
+                <div >
+                    <div class="prod" v-for="i in list">
+                        <img  class="left" src="{{i.tbpic}}">
+                        <div class="detail left">
+                            <span class="p_name">{{i.title}}</span>
+                            <p class="introduct">
+                                {{i.simple_content}}
+                            </p>
+                            <div class="more" data-id="{{i.id}}" @click="url">查看详情<span>▲</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" style="width:350px;">
+                    <style type="text/css">
+                        .page ul li,.page span{
+                            padding: 2px 3px;
+                        }
+                        .page ul li{
+                            cursor: pointer;
+                        }
+                    </style>
+                        <span>当前第{{curentPage}}/{{pageNum}}页</span>
+                        <ul>
+                            <li @click="first">首页</li>
+                            <li @click="pre">上一页</li>
+                            <template v-if="pageNum <3">
+                                <li v-for="i in pageNum">{{i+1}}</li>
+                            </template>
+                            <template v-else>
+                                <li style="line-height:10px;" v-if="curentPage>3" >...</li>
+                                <li @click="page" data-page="{{curentPage-2}}" v-if="curentPage>2">{{curentPage-2}}</li>
+                                <li @click="page" data-page="{{curentPage-1}}" v-if="curentPage>1">{{curentPage-1}}</li>
+                                <li @click="page" style="border:1px solid #000" data-page="{{curentPage}}">{{curentPage}}</li>
+                                <li @click="page" data-page="{{parseInt(curentPage)+1}}" v-if="curentPage<(pageNum)">{{parseInt(curentPage)+1}}</li>
+                                <li @click="page" data-page="{{parseInt(curentPage)+2}}" v-if="curentPage<(pageNum-1)">{{parseInt(curentPage)+2}}</li>
+                                <li  style="line-height:10px;" v-if="curentPage<(pageNum-2)">...</li>
+                            </template>
+                            
+                            <li @click="next">下一页</li>
+                            <li @click="last">末页</li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                    var list=new Vue({
+                            el:"#list",
+                            data:{
+                                list:"",
+                                cid:layoutInit.cid,
+                                currentCate:"",
+                                currentCate2:"",
+                                listNum:{$listNum},
+                                curentPage:1,
+                                num:{$num},//一页列表数量
+                                pageNum:"",
+                            },
+                            computed:{
+                                currentCate:function() {
+                                    return layoutInit.currentCate;
+                                },
+                                currentCate2:function() {
+                                    return layoutInit.currentCate2;
+                                },
+                                pageNum:function() {
+                                    return Math.ceil(this.listNum/this.num);
+                                },
+                            },
+                            methods:{
+                                getList:function() {
+                                    $.get("/index.php?m=Chinese&c=List&a=getList",{cid:list.cid,page:list.curentPage},function(res) {
+                                        list.list=res.data
+                                    },"json");
+                                },
+                                url:function(event) {
+                                    var id=event.currentTarget.dataset.id;
+                                    var arr=list.list;
+                                    for (var i = arr.length - 1; i >= 0; i--) {
+                                        if(arr[i].id==id){
+                                            window.location.href=arr[i].url;
+                                        }
+                                    }                                 
+                                },
+                                next:function() {
+                                    if(list.curentPage<list.pageNum){
+                                        list.curentPage=list.curentPage+1;
+                                        list.getList();
+                                    }
+                                },
+                                pre:function() {
+                                    if(list.curentPage>1){
+                                        list.curentPage=list.curentPage-1;
+                                        list.getList();
+                                    }
+                                    
+                                },
+                                page:function(event) {
+                                    list.getList();
+                                    var page=event.currentTarget.dataset.page;
+                                    list.curentPage=page;
+                                },
+                                first:function() {
+                                    list.curentPage=1;
+                                    list.getList();
+                                },
+                                last:function() {
+                                    list.curentPage=list.pageNum;
+                                    list.getList();
+                                }
+                            }
+                        });
+                        list.getList();
+                </script>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<div class="footer">
+            <div class="footer_main" id="footer">
+                <div class="foot_menu">
+                    <ul v-for="i in list">
+                        <li class="tit"><a href="{{i.url}}">{{i.name}}</a></li>
+
+                        <li v-for="f in i.child"><a href="{{i.url}}" title="企业简介">{{f.name}}</a></li>
+                        
+                    </ul>
+                    
+                    <ul >
+                        <li class="tit">互动社区</li>
+                        <div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                    </ul>
+                    <div class="foot_er left"><p>微信二维码</p><img src="/Public/images/bottom_er.png"></div>
+                    <script type="text/javascript">
+                        var fList=new Vue({
+                            el:"#footer",
+                            data:{
+                                list:"",
+                            },
+                            methods:{
+                                getList:function(res) {
+                                    $.get("/index.php?m=Chinese&c=index&a=getAllCate",{},function(res) {
+                                        var arr=res.data;
+                                        for (var i = arr.length - 1; i >= 0; i--) {
+                                            arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                            if(arr[i].id==this.cid){
+                                                arr[i].class="active";
+                                            }
+                                            else{
+                                                arr[i].class="";
+                                            }
+                                        }
+                                        fList.list=arr;
+                                    },"json");
+                                }
+                            }
+
+                        })
+                        fList.getList();
+                    </script>
+                </div>
+            </div>
+            <div class="footer_con">
+                <div class="foot_con clear">
+                    <div class="foot_con_fl left">版权所有©2014 宁波德科自动门科技有限公司  浙B20091223009   </div>
+                    <div class="foot_con_fr right">技术支持：青柯工作室</div>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var change_fun=function(){
+            var b_width=$(window).width();
+            if(1400<=b_width&&b_width<=1920){
+                var b_change="-"+((1903-b_width)/2).toString()+"px";
+                //alert(b_change);
+                $(".warp").css("left",b_change);
+                document.body.style.overflowX="hidden";
+                //$.body.style.overflowX="hidden";
+            }
+            else if(b_width<1400){
+                //alert("太小了");
+                $(".warp").css("left","-251px");
+                document.body.style.overflowX="visible";
+            }
+
+        }
+        change_fun();
+        $(window).resize(function(){
+            change_fun();
+        });
+        new App().init();
+    });
+</script>
+</body>
+</html>

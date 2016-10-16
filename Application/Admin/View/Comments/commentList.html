@@ -1,0 +1,46 @@
+
+<table id="news_list" class="table table-striped">
+    <tr>
+        <td>编号</td>
+        <td>所属文章</td>
+        <td>姓名</td>
+        <td>邮箱</td>
+        <td>操作</td>
+    </tr>
+    <tr v-for="i in list" data-id="{{i.id}}" data-cid="{{i.cate}}">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td data-mid={{i.id}}>
+            <a @click="content">查看内容</a>
+            <a v-on:click="del" >删除</a>
+        </td>
+    </tr>
+</table>
+
+<script>
+    var list=new Vue({
+        el:"#news_list",
+        data:{
+            list:{$list},
+        },
+        methods:{
+            content:function(event) {
+                var id=event.currentTarget.parentNode.dataset.id;
+                dialog.iframeBox("留言内容","/index.php?m=Admin&c=Comments&a=showContent&id="+id,"70%","50%");
+            },
+            del:function(event){
+                var mid=event.currentTarget.parentNode.dataset.id;
+                $.get("/index.php?m=Admin&c=Comments&a=del",{id:id},function(res) {
+                    if(res.status==1){
+                        dialog.successFun(res.message,"nav.list();");
+                    }
+                    else{
+                        dialog.error(res.message);
+                    }
+                },"json");
+            },
+        }
+    });
+</script>

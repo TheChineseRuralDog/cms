@@ -1,0 +1,121 @@
+
+.main{
+    width: 100%;
+}
+.main .box .about_us{
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.main .box .about_us button{
+    display: block;
+    width: 120px;
+    height: 35px;
+    border: 2px solid #000000;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: Microsoft YaHei;
+    font-size: 1.6em;
+    color: #232323;
+    padding-bottom: 2px;
+}
+.main .box .about_us button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+.main .box .about_us .title{
+    font-size: 1.4em;
+    line-height: 55px;
+    text-align: center;
+}
+.main .box .about_us img{
+    margin:  15px auto;
+}
+.main .box .about_us .content{
+    font-size: 1.2em;
+    text-indent: 2em;
+    line-height: 26px;
+}
+.main .box .product{
+    width: 1024px;
+    background-color: #f7f7f7;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    margin: 0 auto;
+}
+.main .box .product .title{
+    text-align: center;
+    font-size: 1.6em;
+    font-family: Microsoft YaHei;
+    line-height:30px;
+}
+.main .box .product .line1{
+    margin: 15px auto;
+    margin-top: 10px;
+}
+.main .box .product .pro{
+    overflow: hidden;
+    padding-left: 3px;
+}
+.main .box .product .pro li{
+    width: 280px;
+    float: left;
+    margin: 0 30px;
+}
+.main .box .product .pro li a img{
+    margin-left: 8px;
+}
+.main .box .product .pro li .product_name{
+    font-size: 1.4em;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    line-height: 40px;
+}
+.main .box .product .pro li .line{
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.main .box .product .pro li .content{
+    font-size: 1.2em;
+    text-align: center;
+}
+.main .box .contact{
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+.main .box .contact .title_en,.main .box .contact .title_cn{
+    font-size: 1.6em;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    line-height: 40px;
+}
+.main .box .contact .line4{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main .box .contact .content{
+    overflow: hidden;
+}
+.main .box .contact .content img {
+    width: 480px;
+    float: left;
+}
+.main .box .contact .content .text{
+    float: left;
+    margin-left: 60px;
+}
+.main .box .contact .content .text p{
+    line-height: 60px;
+    font-size: 1.4em;
+    font-family: "Microsoft Yahei";
+    margin-top: 45px;
+}
+.main .box .contact .content .text p+p{
+    margin-top: 0px;
+}

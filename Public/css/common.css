@@ -1,0 +1,92 @@
+header{
+    width: 100%;
+    position: relative;
+}
+header .box{
+    width: 1024px;
+    margin: 0 auto;
+    height: 88px;
+    position: relative;
+}
+header .box .logo{
+    left: 80px;
+    position: absolute;
+    top: 35px;
+    float: left;
+    z-index: 99;
+    width: 110px;
+}
+header .box .nav{
+    margin: 0 20px;
+    overflow: hidden;
+    float: left;
+    margin-left: 300px;
+}
+header .box .nav li{
+    float: left;
+    margin: 30px 30px;
+    margin-top: 35px;
+    font-size: 1.4em;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    cursor: pointer;
+}
+header .box .nav li:hover{
+    border-bottom: 3px solid #0a67fb;
+}
+header .box .nav .active{
+    color: #ff8121;
+}
+header .banner{
+    position: relative;
+    height: 401px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1280px;
+}
+header .banner img{
+    width: 1280px;
+    float: left;
+}
+header .banner .img_box{
+    width: 5120px;
+
+}
+header .btn_group{
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -25px;;
+}
+header .btn_group li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+header .btn_group .active{
+    background-color: #717070;
+}
+
+footer{
+    height: 50px;
+    background-color: #3a3a3a;
+}
+footer p{
+    float: left;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+footer p+p{
+    float: right;
+}
+footer .box{
+    width: 1024px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 30px;
+}

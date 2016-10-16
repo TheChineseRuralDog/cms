@@ -1,0 +1,66 @@
+<script>
+	var listInit=new Vue({
+		data:{
+			subMenu:{$subMenu},
+			cateInfo:{$cateInfo},
+			list:{$list},
+		}
+	});
+</script>
+<div class="container">
+	<div class="row">
+		<div id="subMenu" class="col-md-4">
+			侧边导航
+			<ul>
+				<li v-for="i in subMenu">
+					<a href="{{i.url}}">{{i.name}}</a>
+					<ul>
+						<li v-for="j in i.child"><a href="{{j.url}}">{{j.name}}</a></li>
+					</ul>
+				</li>
+			</ul>
+			<script>
+				var subMenu=new Vue({
+					el:"#subMenu",
+					data:{
+						subMenu:"",
+					},
+					computed:{
+						subMenu:function() {
+							return listInit.subMenu;
+						}
+					}
+				});
+			</script>
+		</div>
+		<div class="col-md-8" id="list">
+			<div class="col-md-2">
+				<p>栏目标题</p>
+				{{listInfo.name}}
+			</div>
+			<div class="col-md-10">
+				<p>栏目列表（如果当前栏目下有列表，显示当前栏目下的列表，若无，则显示所有子栏目下的列表）</p>
+				<ul>
+					<li v-for="i in list"><a href="{{i.url}}">{{i.title}}</a></li>
+				</ul>
+			</div>
+			<script>
+				var list=new Vue({
+					el:"#list",
+					data:{
+						listInfo:"",
+						list:"",
+					},
+					computed:{
+						listInfo:function() {
+							return listInit.cateInfo;
+						},
+						list:function() {
+							return listInit.list;
+						}
+					}
+				});
+			</script>
+		</div>
+	</div>
+</div>

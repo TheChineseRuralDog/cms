@@ -1,0 +1,1 @@
+a:3:{i:0;s:3:"tid";i:1;s:5:"tname";s:5:"_type";a:2:{s:3:"tid";s:7:"int(11)";s:5:"tname";s:12:"varchar(225)";}}

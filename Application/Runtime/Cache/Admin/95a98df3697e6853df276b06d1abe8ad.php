@@ -1,0 +1,225 @@
+<?php if (!defined('THINK_PATH')) exit();?><style>
+    #table .head{
+        margin-bottom: 30px;
+    }
+    #table ul{
+        margin-left:15px;
+        list-style:none;
+        clear: both;
+    }
+    #table li{
+        margin:10px 0;
+    }
+    #table li >div{
+        overflow: hidden;
+    }
+    #table li >div>div{
+        float: left;
+    }
+    #table li >div>div span{
+        cursor: pointer;
+    }
+    #table li .icon{
+        width: 10%;
+        height: 20px;
+        text-align: center;
+    }
+    #table li .name,#table li .mark,#table li .order{
+        width: 15%;
+        text-align: center;
+    }
+    #table li .operation{
+        width: 25%;
+        text-align: center;
+    }
+     #table li .type{
+        width: 15%;
+        text-align: center;
+    }
+
+</style>
+
+
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#home" id="chinese" data-toggle="tab">中文</a>
+    </li>
+    <li><a href="#senior" id="engilsh" data-toggle="tab">英文</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+        
+    <style>
+      #table .head{
+          margin-bottom: 30px;
+      }
+      #table ul{
+          margin-left:15px;
+          list-style:none;
+          clear: both;
+      }
+      #table li{
+          margin:10px 0;
+      }
+      #table li >div{
+          overflow: hidden;
+      }
+      #table li >div>div{
+          float: left;
+      }
+      #table li >div>div span{
+          cursor: pointer;
+      }
+      #table li .icon{
+          width: 10%;
+          height: 20px;
+          text-align: center;
+      }
+      #table li .name,#table li .mark,#table li .order{
+          width: 15%;
+          text-align: center;
+      }
+      #table li .operation{
+          width: 25%;
+          text-align: center;
+      }
+       #table li .type{
+          width: 15%;
+          text-align: center;
+      }
+    </style>
+    <script type="text/x-template" id="item-template">
+      <li>
+        <div>
+          <div @click="toggle" class="icon" v-if="isFolder"><span class="{{open ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus'}}"></span></div>
+          <div class="icon" v-else></div>
+          <div class="name">{{model.name}}</div>
+          <div class="type">{{model.tname}}</div>
+          <div class="mark">{{model.mark}}</div>
+          <div class="order">{{model.order1}}</div>
+          <div class="operation" data-id="{{model.id}}">
+              <a @click="addChildCate">增加下级栏目</a>
+              <a @click="update">修改</a>
+              <a @click="del">删除</a>
+          </div>
+        </div>
+        <ul  v-show="open" v-if="isFolder">
+            <item
+            class="item"
+            v-for="model in model.child"
+            :model="model">
+            </item>
+        </ul>
+      </li>
+    </script>
+
+    <ul id="table">
+      <li class="head">
+        <div>
+          <div class="icon"></div>
+          <div class="name">栏目名称</div>
+          <div class="type">栏目类型</div>
+          <div class="mark">栏目标识</div>
+          <div class="order">栏目排序</div>
+          <div class="operation">栏目操作</div>
+        </div>
+      </li>
+      <item
+        v-for="model in treeData"
+        class="item"
+        :model="model">
+      </item>
+    </ul>
+
+    <script>
+
+        Vue.component('item', {
+          template: '#item-template',
+          props: {
+            model: Object
+          },
+          data: function () {
+            return {
+              open: false
+            }
+          },
+          computed: {
+            isFolder: function () {
+              return this.model.child &&
+                this.model.child.length
+            }
+          },
+          methods: {
+            toggle: function () {
+              if (this.isFolder) {
+                this.open = !this.open
+              }
+            },
+            del:function(event) {
+              var id=event.currentTarget.parentNode.dataset.id;
+              $.get("/index.php?m=Admin&c=Cate&a=del",{id:id},function(res) {
+                  if(res.status==1){
+                    dialog.successFun(res.message,function() {
+                      nav.cateList();
+                    });
+                  }
+                  else{
+                    dialog.error(res.message);
+                  }
+              },"json");
+            },
+            update:function(event) {
+              var id=event.currentTarget.parentNode.dataset.id;
+              $.get("/index.php?m=Admin&c=Cate&a=update",{id:id},function(res) {
+                  $("#content").html(res);
+                  editor=KindEditor.create('textarea[name="content"]',{
+                      uploadJson : '/kindeditor/php/upload_json.php',
+                      fileManagerJson : '/kindeditor/php/file_manager_json.php',
+                      allowFileManager : true,
+                  });
+              });
+            },
+            addChildCate:function(event) {
+              var id=event.currentTarget.parentNode.dataset.id;
+              $.get("/index.php?m=Admin&c=Cate&a=cateAdd",{id:id},function(res) {
+                  $("#content").html(res);
+                  editor=KindEditor.create('textarea[name="content"]',{
+                      uploadJson : '/kindeditor/php/upload_json.php',
+                      fileManagerJson : '/kindeditor/php/file_manager_json.php',
+                      allowFileManager : true,
+                  });
+              });
+            }
+          }
+        });
+        var list=new Vue({
+            el:"#table",
+            data:{
+                treeData: "",
+            },
+            methods:{
+                getCate:function() {
+                    $.get("/index.php?m=admin&c=cate&a=getCate",{lang:init.lang},function(res) {
+                        if(res.status==0){
+                            dialog.error(res.message);
+                        }
+                        else{
+                            list.treeData=res.data;
+                        }
+                    },"json")
+                }
+            }
+        });
+        list.getCate();
+    </script>
+    
+</div> 
+<script type="text/javascript">
+    $("#chinese").click(function() {
+        init.lang=0;
+        list.getCate();
+    });
+    $("#engilsh").click(function() {
+        init.lang=1;
+        list.getCate();
+    })
+</script>

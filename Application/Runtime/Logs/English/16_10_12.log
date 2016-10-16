@@ -1,0 +1,338 @@
+[ 2016-10-12T12:08:58+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Index
+
+[ 2016-10-12T12:09:30+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 75 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0110s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-12T12:09:46+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 75 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 78 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-12T12:16:48+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-12T12:20:00+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-12T12:20:08+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 77 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 80 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 1 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 2 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 4 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 5 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 6 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 7 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-12T12:20:32+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+
+[ 2016-10-12T12:21:25+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+
+[ 2016-10-12T12:21:34+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-12T12:30:57+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 28 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-12T12:33:17+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 28 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+
+[ 2016-10-12T12:33:55+08:00 ] ::1 /index.php?m=english
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 76 行.
+NOTIC: [8] Undefined variable: cate2 D:\phpStudy\WWW\zdm\Application\English\Controller\IndexController.class.php 第 79 行.
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 28 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-12T12:34:00+08:00 ] ::1 /index.php?m=english&c=Index&a=cate&id=27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=27 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cate` WHERE ( id=27 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 28 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: listNum D:\phpStudy\WWW\zdm\Application\Runtime\Cache\English\e63627a86525280566a04bf71955890e.php 第 238 行.
+NOTIC: [8] Undefined variable: num D:\phpStudy\WWW\zdm\Application\Runtime\Cache\English\e63627a86525280566a04bf71955890e.php 第 240 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-12T14:51:44+08:00 ] ::1 /index.php?m=english&c=Index&a=cate&id=27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `tpl_list` FROM `cate` WHERE ( id=27 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE ( id=27 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM cate c INNER JOIN type t on c.tid=t.tid   WHERE ( c.parent=0 and c.hide=1 and c.lang=1 ) ORDER BY c.order1  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 27 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cate` WHERE `parent` = 28 AND `hide` = 1 ORDER BY order1 asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: listNum D:\phpStudy\WWW\zdm\Application\Runtime\Cache\English\e63627a86525280566a04bf71955890e.php 第 238 行.
+NOTIC: [8] Undefined variable: num D:\phpStudy\WWW\zdm\Application\Runtime\Cache\English\e63627a86525280566a04bf71955890e.php 第 240 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

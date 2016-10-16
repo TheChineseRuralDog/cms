@@ -1,0 +1,252 @@
+
+
+<form class="form-horizontal" id="form" name="form">
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#home" data-toggle="tab">基本设置</a>
+        </li>
+        <li><a href="#senior" data-toggle="tab">高级设置</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <div v-if="form.parent != 0" class="form-group" style="margin-top: 15px;">
+                <label class="col-md-2 control-label">父级栏目:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" value="{$parentName}({$parentMark})" disabled>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label class="col-md-2 control-label">栏目类型:</label>
+                <div class="col-md-10">
+                    <select v-model="form.tid" style="margin-top: 8px;" v-on:change="tpl">
+                        <option value="0" selected>请选择栏目类型</option>
+                        <option v-for="item in cateType" value="{{item.tid}}">{{item.tname}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">栏目名称:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">栏目标示（唯一）:</label>
+                <div class="col-md-4">
+                    <input id="mark" type="text" class="form-control" v-on:blur="onlyOne" v-model="form.mark">
+                </div>
+                <div class="col-md-4">
+                    <span style="color: #afafaf;line-height: 30px">(数字)模板内容调出标示，同一语言下不能重复</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">排列顺序:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.order1">
+                </div>
+            </div>
+            <div style="margin-top: 15px;" class="form-group">
+                <label class="col-md-2 control-label">是否显示:</span></label>
+                <div style="margin-top: 7px;" class="col-md-10">
+                    <input v-model="form.hide" style="margin: 0 8px;" type="radio" name="radio" value="1">是
+                    <input v-model="form.hide" style="margin: 0 8px;" type="radio" name="radio" value="2">否
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label class="col-md-2 control-label">发布语言:</label>
+                <div class="col-md-10">
+                    <select v-model="form.lang" style="margin-top: 8px;" >
+                        <option value="-1" selected>请选择语言类型</option>
+                        <option value="0">中文</option>
+                        <option value="1">英文</option>
+                    </select>
+                </div>
+            </div>
+           <!--  <div class="form-group">
+                <label class="col-md-2 control-label">栏目使用页面:</span></label>
+                <div style="margin-top: 7px;" class="col-md-10">
+                    <input v-model="form.type2" style="margin: 0 8px;" type="radio" name="radio" value="1">列表页<br/>
+                    <input v-model="form.type2" style="margin: 0 8px;" type="radio" name="radio" value="2">引导栏目(不能发布内容，只作为显示)<br/>
+                    <input v-model="form.type2" style="margin: 0 8px;" type="radio" name="radio" value="3">外部链接(链接到其他网站或php文件)<br/>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <input v-model="form.external_url" class="form-control" style="margin: 0 8px;" type="text" value="">
+                </div>
+            </div> -->
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-2">
+                    <button v-on:click="post" type="button" class="btn btn-default">确定</button>
+                </div>
+                <div class="col-md-offset-0 col-md-2">
+                    <button type="button" class="btn btn-default">重置</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="senior">
+          
+            <div class="form-group">
+                <label class="col-md-2 control-label">列表页显示数量:</span></label>
+                <div style="margin-top: 7px;" class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.list_num">
+                </div>
+                <div style="margin-top: 7px;" class="col-md-4">
+                    <span style="color: #afafaf">仅对列表页起作用</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">列表页模板:</span></label>
+                <div style="margin-top: 7px;" class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.tpl_list">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">内容页模板:</span></label>
+                <div style="margin-top: 7px;" class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.tpl_content">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" style="line-height: 100px;">栏目图片1:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.pic1" style="margin-top: 40px">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary pic" style="margin-top: 40px;display:none;" onclick="$('#tbpic').click();" >点击上传</button>
+                </div>
+                <div class="col-md-2">
+                    <img id="pic1" onclick="init.picItem='pic1';$('#tbpic').click();" src="/Public/images/no_pc.gif" style="width: 98px;height: 98px;border: 1px solid #afafaf;cursor:pointer;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" style="line-height: 100px;">栏目图片2:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.pic2" style="margin-top: 40px">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary pic" style="margin-top: 40px;display:none;" onclick="$('#tbpic').click();" >点击上传</button>
+                </div>
+                <div class="col-md-2">
+                    <img id="pic2" onclick="init.picItem='pic2';$('#tbpic').click();" src="/Public/images/no_pc.gif" style="width: 98px;height: 98px;border: 1px solid #afafaf;cursor:pointer;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" style="line-height: 100px;">栏目图片3:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" v-model="form.pic3" style="margin-top: 40px">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary pic" style="margin-top: 40px;display:none;" onclick="$('#tbpic').click();" >点击上传</button>
+                </div>
+                <div class="col-md-2">
+                    <img id="pic3" onclick="init.picItem='pic3';$('#tbpic').click();" src="/Public/images/no_pc.gif" style="width: 98px;height: 98px;border: 1px solid #afafaf;cursor:pointer;">
+                </div>
+            </div>
+            <input id="tbpic" name="tbpic" type="file" class="" style="margin-top: 40px;display: none;" onchange="up_tbpic()">
+          <!--   <div class="form-group" style="height: 100px;">
+                <label class="col-md-2 control-label" for="exampleInputFile" style="line-height: 100px;">栏目图片1:</label>
+                <div class="col-md-4" style="margin-top: 35px;">
+                    <input class="col-md-4 form-control" type="text" v-model="form.pic1">
+                </div>
+                <div class="col-md-2"  style="margin-top: 35px;">
+                    <input type="file" id="exampleInputFile1">
+                </div>
+                <div class="col-md-4">
+                    <img src="./content/images/no_pc.gif">
+                </div>
+            </div>
+            <div class="form-group" style="height: 100px;">
+                <label class="col-md-2 control-label" for="exampleInputFile" style="line-height: 100px;">栏目图片2:</label>
+                <div class="col-md-4" style="margin-top: 35px;">
+                    <input class="col-md-4 form-control" type="text" v-model="form.pic1">
+                </div>
+                <div class="col-md-2"  style="margin-top: 35px;">
+                    <input type="file" id="exampleInputFile2">
+                </div>
+                <div class="col-md-4">
+                    <img src="./content/images/no_pc.gif">
+                </div>
+            </div> -->
+            <div class="form-group ">
+                <label class="col-md-2 control-label" for="exampleInputFile" style="line-height: 100px;">栏目内容:</label>
+                <div class="col-md-10">
+                    <textarea id="editor_id" name="content" style="width:670px;height:500px;"></textarea>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script>  
+        var form=new Vue({
+            el:"#form",
+            data:{
+                // only_one:false,//提交标志，当为true 才能提交
+                cateType:{$cateType},
+                tpllist:{$tplList},
+                tplContent:{$tplContent},
+                form:{
+                    name:"",
+                    tid:"",
+                    hide:"1",
+                    order1:"10",
+                    parent:{$parent},
+                    mark:"",
+                    list_num:20,
+                    pic1:"",
+                    pic2:"",
+                    pic3:"",
+                    tpl_list:"list_list",
+                    tpl_content:"list_content",
+                    lang:"",
+                }
+            },
+            computed:{
+            },
+            methods:{
+                post:function(event){
+                    if(form.form.name==""){
+                        dialog.error("栏目名称不能为空");
+                        return ;
+                    }
+                    if(form.form.tid==0){
+                        dialog.error("请选择栏目类型");
+                        return ;
+                    }
+                    if(form.form.mark==""){
+                        dialog.error("栏目标识不能为空");
+                        return ;
+                    }
+                    form.form.content=editor.html();
+                    $.post("?m=Admin&c=Cate&a=doCateAdd",form.form,function(res){
+                        if(res.status==1){
+                            dialog.toconfirm(res.message);
+                            dialog.confirm("是否继续添加","是","form.form.name='';form.form.tid=0;form.form.hide=1;form.form.order1=10;form.form.mark='';","否","nav.cateList();");
+                        }
+                        else{
+                            dialog.error(res.message);
+                        }
+                    },"json");
+                },
+            }
+        });
+
+        //异步上传图片并预览
+        function up_tbpic(){
+            $.ajaxFileUpload(
+            {
+                url: '/index.php?m=Admin&c=List&a=doUpload&tbpic='+form.form[init.picItem], //用于文件上传的服务器端请求地址
+                secureuri: false, //是否需要安全协议，一般设置为false
+                fileElementId: 'tbpic', //文件上传域的ID
+                dataType: 'json', //返回值类型 一般设置为json
+                success: function (data, status)  //服务器成功响应处理函数
+                {
+                    $("#"+init.picItem).attr("src",data.responseText);
+                    form.form[init.picItem]=data.responseText;
+                },
+                error: function (data, status, e)//服务器响应失败处理函数
+                {
+                    $("#"+init.picItem).attr("src",data.responseText);
+                    form.form[init.picItem]=data.responseText;
+                }
+            });
+        };
+    </script>
+</form>

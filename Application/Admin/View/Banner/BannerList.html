@@ -1,0 +1,62 @@
+<table id="news_list" class="table table-striped">
+    <tr>
+        <td>名称</td>
+        <td>标识</td>
+        <td>操作</td>
+    </tr>
+    <tr v-for="i in list" data-id="{{i.id}}" data-cid="{{i.cate}}">
+        <td>{{i.name}}</td>
+        <td>{{i.mark}}</td>
+        <td v-if="i.default==0" data-bid={{i.id}}>
+            <a @click="img">图片管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a @click="update">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a v-on:click="del" >删除</a>
+        </td>
+        <td v-if="i.default==1" data-bid={{i.id}}>
+            <a @click="img">图片管理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a @click="update">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>(无法删除)</span>
+        </td>
+    </tr>
+</table>
+
+<script>
+    var list=new Vue({
+        el:"#news_list",
+        data:{
+            list:{$list},
+        },
+        methods:{
+            del:function(event){
+                var bid=event.currentTarget.parentNode.dataset.bid;
+                dialog.confirm2("将会连当前轮播下的图片一起删除","是",function(bid) {
+                    // alert(bid);
+                    $.get("/index.php?m=Admin&c=Banner&a=del",{bid:bid},function(res) {
+                        if(res.status==1){
+                            dialog.successFun(res.message,function() {
+                                nav.bannerList();
+                            });
+                        }
+                        else{
+                            dialog.error(res.message);
+                        }
+                    },"json");
+                },"否",function() {
+                    return;
+                },bid)
+            },
+            update:function(event) {
+                var bid=event.currentTarget.parentNode.dataset.bid;
+                $.get("/index.php?m=Admin&c=Banner&a=update",{bid:bid},function(res) {
+                  $("#content").html(res);
+                });
+            },
+            img:function(event) {
+                var bid=event.currentTarget.parentNode.dataset.bid;
+                $.get("/index.php?m=Admin&c=Banner&a=img",{bid:bid},function(res) {
+                  $("#content").html(res);
+                });
+            }
+        }
+    });
+</script>

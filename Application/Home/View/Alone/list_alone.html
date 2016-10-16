@@ -1,0 +1,81 @@
+<script>
+	var aloneInit=new Vue({
+		data:{
+			subMenu:{$subMenu},
+			aloneInfo:{$aloneInfo},
+			aloneContent:{$aloneContent},
+		}
+	});
+</script>
+<div class="container">
+	<div class="row">
+		<div id="subMenu" class="col-md-4">
+			侧边导航
+			<ul>
+				<li v-for="i in subMenu">
+					<a href="{{i.url}}">{{i.name}}</a>
+					<ul>
+						<li v-for="j in i.child"><a href="{{j.url}}">{{j.name}}</a></li>
+					</ul>
+				</li>
+			</ul>
+			<script>
+				var subMenu=new Vue({
+					el:"#subMenu",
+					data:{
+						subMenu:"",
+					},
+					computed:{
+						subMenu:function() {
+							return aloneInit.subMenu;
+						}
+					}
+				});
+			</script>
+		</div>
+		<div class="col-md-8" id="alone">
+			<div class="col-md-2">
+				<p>栏目标题</p>
+				{{aloneInfo.name}}
+			</div>
+			<div class="col-md-10">
+				<p>栏目内容</p>
+				<table border="1">
+					<tr>
+						<td>栏目名称</td>
+						<td>{{aloneContent.title}}</td>
+					</tr>
+					<tr>
+						<td>栏目日期</td>
+						<td>{{aloneContent.date}}</td>
+					</tr>
+					<tr>
+						<td>栏目简介</td>
+						<td>{{aloneContent.simple_content}}</td>
+					</tr>
+					<tr>
+						<td>栏目内容</td>
+						<td>{{{aloneContent.content}}}</td>
+					</tr>
+				</table>
+			</div>
+			<script>
+				var alone=new Vue({
+					el:"#alone",
+					data:{
+						aloneInfo:"",
+						aloneContent:"",
+					},
+					computed:{
+						aloneInfo:function() {
+							return aloneInit.aloneInfo;
+						},
+						aloneContent:function() {
+							return aloneInit.aloneContent;
+						}
+					}
+				});
+			</script>
+		</div>
+	</div>
+</div>

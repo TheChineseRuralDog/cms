@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/Public/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/Public/css/main.css" type="text/css">
+    <script src="/Public/js/jquery-3.0.0.min.js"></script>
+	<script src="/Public/js/vue.min.js"></script>
+	<script src="/Public/js/layer.js"></script>
+	<script src="/Public/js/dialog.js"></script>
+	<script type="text/javascript">
+    var layoutInit=new Vue({
+        data:{
+            cate:{$cate},
+            cid:{$cid},
+            topCid:{$topCid},
+        }
+    });
+</script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false">
+<div class="warp">
+
+    <div class="header">
+            <div class="logo left"><img src="/Public/images/logo.png"></div>
+            <div class="top right">
+                <div class="lang">
+                    <span><a href="/index.php?m=chinese">简体中文</a></span><span>|</span><span><a href="/index.php?m=english">English</a></span>
+                </div>
+
+                <div class="email right"><img src="/Public/images/email.png"><span>dorcoo@dorcoo.com</span></div>
+                <div class="tel right"><img src="/Public/images/tel.png"><span>0574-88167020</span></div>
+            </div>
+
+
+    </div>
+    <div class="menu">
+        <ul class="nav clear" id="nav">
+            <li v-for="i in cate" class="{{i.class}}">
+                <a href="{{i.url}}">{{i.name}}</a>
+                <div class="nav-w">
+                    <div class="section-nav1">
+                        <ul>
+                            <li v-for="j in i.child"><a href="/index.php?m=chinese&c=index&a=cate&id={{j.id}}">{{j.name}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <script type="text/javascript">
+	            var nav=new Vue({
+	                el:"#nav",
+	                data:{
+	                    cate:"",
+	                    cid:layoutInit.topCid,
+	                },
+	                computed:{
+	                    cate:function(){
+	                        var arr=layoutInit.cate;
+	                        var obj=new Object();
+	                        var obj={id:0,name:"首页",url:"/index.php?m=english"};
+	                        if(this.cid==0){
+	                            obj.class="active";
+	                        }
+	                        else{
+	                            obj.class="";
+	                        }
+	                        for (var i = arr.length - 1; i >= 0; i--) {
+	                            arr[i].url="/index.php?m=english&c=Index&a=cate&id="+arr[i].id
+	                            if(arr[i].id==this.cid){
+	                                arr[i].class="active";
+	                            }
+	                            else{
+	                                arr[i].class="";
+	                            }
+	                        }
+	                        arr.unshift(obj);
+	                        return arr;
+	                    },
+	                }
+	            })
+            </script>
+        </ul>
+    </div>
+    <div class="banner" id="banner">
+        <div class="banner_main">
+            <ul class="">
+                <li v-for="i in list" class="{{i.class}}"><a href="" title="1"><img src="{{i.url}}" alt="1" /></a></li>
+                <!-- <li><a href="" title="2"><img src="/Public/images/index2.jpg" alt="2" /></a></li> -->
+                <!-- <li><a href="" title="3"><img src="/Public/images/index3.jpg" alt="3" /></a></li> -->
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var banner=new Vue({
+                el:"#banner",
+                data:{
+                    list:"",
+                },
+                methods:{
+                    getBanner:function() {
+                        $.get("/index.php?m=chinese&c=index&a=getBanner",{mark:1},function(res) {
+                            res.data.class="banner_st";
+                            banner.list=res.data;
+                        },"json")
+                    }
+                }
+            });
+            banner.getBanner();
+        </script>
+    </div>
+    <div class="small_banner" id="smallBanner">
+        <div class="btn1"><a><img src="/Public/images/pre.png"></a></div>
+        <div class="btn2"><a><img src="/Public/images/next.png"></a></div>
+        <ul class="small_ul">
+            <li v-for="i in list"><a href="{{{i.link}}}" title=""><img src="{{i.url}}" alt="" /></a></li>
+        </ul>
+        <script type="text/javascript">
+            var banner1=new Vue({
+                el:"#smallBanner",
+                data:{
+                    list:"",
+                },
+                methods:{
+                    getBanner:function() {
+                        $.get("/index.php?m=chinese&c=index&a=getBanner",{mark:2},function(res) {
+                            res.data.class="banner_st";
+                            banner1.list=res.data;
+                        },"json")
+                    }
+                }
+            });
+            banner1.getBanner();
+        </script>
+    </div>
+        <div class="banner_bottom_warp">
+        <ul>
+            <li><a href="/index.php?m=Chinese&c=Index&a=cate&id=1" title="1"><img src="/Public/images/1.png" alt="1" /></a></li>
+            <li><a href="/index.php?m=Chinese&c=Index&a=cate&id=2" title="2"><img src="/Public/images/2.png" alt="2" /></a></li>
+            <li><a href="/index.php?m=Chinese&c=Index&a=cate&id=6" title="3"><img src="/Public/images/3.png" alt="3" /></a></li>
+        </ul>
+</div>
+  
+    <div class="footer">
+            <div class="footer_main" id="footer">
+                <div class="foot_menu">
+                    <ul v-for="i in list">
+                        <li class="tit"><a href="/index.php?m=Chinese&c=Index&a=cate&id={{i.id}}">{{i.name}}</a></li>
+
+                        <li v-for="f in i.child"><a href="/index.php?m=Chinese&c=Index&a=cate&id={{f.id}}" title="企业简介">{{f.name}}</a></li>
+                        
+                    </ul>
+                    
+                    <ul >
+                        <li class="tit">互动社区</li>
+                        <div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                    </ul>
+                    <div class="foot_er left"><p>微信二维码</p><img src="/Public/images/bottom_er.png"></div>
+                    <script type="text/javascript">
+                        var fList=new Vue({
+                            el:"#footer",
+                            data:{
+                                list:"",
+                            },
+                            methods:{
+                                getList:function(res) {
+                                    $.get("/index.php?m=Chinese&c=index&a=getAllCate",{},function(res) {
+                                        var arr=res.data;
+                                        for (var i = arr.length - 1; i >= 0; i--) {
+                                            arr[i].url="/index.php?m=Chinese&c=Index&a=cate&id="+arr[i].id
+                                            if(arr[i].id==this.cid){
+                                                arr[i].class="active";
+                                            }
+                                            else{
+                                                arr[i].class="";
+                                            }
+                                        }
+                                        fList.list=arr;
+                                    },"json");
+                                }
+                            }
+
+                        })
+                        fList.getList();
+                    </script>
+                </div>
+            </div>
+            <div class="footer_con">
+                <div class="foot_con clear">
+                    <div class="foot_con_fl left">版权所有©2014 宁波德科自动门科技有限公司  浙B20091223009   </div>
+                    <div class="foot_con_fr right">技术支持：青柯工作室</div>
+                </div>
+            </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/Public/js/js.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var change_fun=function(){
+            var b_width=$(window).width();
+            if(1400<=b_width&&b_width<=1920){
+                var b_change="-"+((1903-b_width)/2).toString()+"px";
+                //alert(b_change);
+                $(".warp").css("left",b_change);
+                document.body.style.overflowX="hidden";
+                //$.body.style.overflowX="hidden";
+            }
+            else if(b_width<1400){
+                //alert("太小了");
+                $(".warp").css("left","-251px");
+                document.body.style.overflowX="visible";
+            }
+
+        }
+        change_fun();
+        $(window).resize(function(){
+            change_fun();
+        });
+        new App().init();
+    });
+</script>
+</body>
+</html>
